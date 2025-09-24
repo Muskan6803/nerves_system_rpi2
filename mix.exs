@@ -77,6 +77,13 @@ defmodule NervesLivebook.MixProject do
       {:livebook, "~> 0.17.0"},
       {:plug, "~> 1.12"},
       {:vintage_net, "~> 0.13"},
+      {:membrane_core, "~> 1.2"},
+      {:membrane_portaudio_plugin, "~> 0.19.2"},
+      {:membrane_file_plugin, "~> 0.16"},
+      {:membrane_wav_plugin, "~> 0.7"},
+      {:membrane_hackney_plugin, "~> 0.11.0"},
+      {:membrane_mp3_mad_plugin, "~> 0.18.4"},
+
 
       # Pull in commonly used libraries as a convenience to users.
       {:blue_heron, "~> 0.5", targets: @ble_targets},
@@ -120,7 +127,11 @@ defmodule NervesLivebook.MixProject do
       {:nerves_system_rpi, "~> 1.31", runtime: false, targets: :rpi},
       {:nerves_system_rpi0, "~> 1.31", runtime: false, targets: :rpi0},
       {:nerves_system_rpi0_2, "~> 1.31", runtime: false, targets: :rpi0_2},
-      {:nerves_system_rpi2, "~> 1.31", runtime: false, targets: :rpi2},
+      {:nerves_system_rpi2,
+      github: "git@github.com:Muskan6803/nerves_system_rpi2.git",
+      branch: "add-portaudio-alsa",
+      runtime: false, 
+      targets: :rpi2},
       {:nerves_system_rpi3, "~> 1.31", runtime: false, targets: :rpi3},
       {:nerves_system_rpi3a, "~> 1.31", runtime: false, targets: :rpi3a},
       {:nerves_system_rpi4, "~> 1.31", runtime: false, targets: :rpi4},
